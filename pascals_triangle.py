@@ -1,8 +1,9 @@
 triangle_height = 10
-
+max_length = triangle_height + 1
 
 for ix, row in enumerate(range(triangle_height)):
     row_length = ix + 1
+    white_space = " " * int((max_length - row_length)/2)
     row_vals = [0] * row_length
     row_vals[0] = 1
     row_vals[-1] = 1
@@ -17,5 +18,5 @@ for ix, row in enumerate(range(triangle_height)):
                 continue
         previous_row = row_vals
 
-    print(row_vals)
+    print(f"{white_space}{' '.join([str(x) for x in row_vals])}{white_space}")
 
