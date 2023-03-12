@@ -19,22 +19,23 @@ t.rt(90)
 
 for i in range(18):
     t.rt(20)
-    t.fd(100)
+    # t.fd(100)
 
     if i % 2 == 0:
+        t.fd(100)
         # draw the smaller circle
         # catching the top point, zeroth
 
         if i < 9:
-            small_radius = i * 20
+            small_radius = i * 40
             t.pendown()
             t.circle(small_radius)
         else:
-            small_radius = (i - 9) * 20
-            t.rt(180)
+            small_radius = (i - 9) * 40
+            t.rt(90)
             t.pendown()
             t.circle(small_radius)
-            t.rt(180)
+            t.rt(90)
 
     t.penup()
     t.goto(CENTER)
